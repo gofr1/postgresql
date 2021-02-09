@@ -16,3 +16,8 @@ END $$;
 CALL testing();
 
 DROP TABLE customer;
+
+-- Get stored procedure text
+SELECT prosrc 
+FROM pg_proc 
+WHERE proname = 'testing';
